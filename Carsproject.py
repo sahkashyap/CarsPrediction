@@ -32,13 +32,13 @@ if st.button("Predict"):
     [[name,year,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,seats]],
     columns=['name','year','km_driven','fuel','seller_type','transmission','owner','mileage','engine','max_power','seats'])
     
-    input_data_model['owner'].replace(['First Owner', 'Second Owner', 'Third Owner',
+    input_data_model['owner']=input_data_model['owner'].replace(['First Owner', 'Second Owner', 'Third Owner',
        'Fourth & Above Owner', 'Test Drive Car'],
                            [1,2,3,4,5], inplace=True)
-    input_data_model['fuel'].replace(['Diesel', 'Petrol', 'LPG', 'CNG'],[1,2,3,4], inplace=True)
-    input_data_model['seller_type'].replace(['Individual', 'Dealer', 'Trustmark Dealer'],[1,2,3], inplace=True)
-    input_data_model['transmission'].replace(['Manual', 'Automatic'],[1,2], inplace=True)
-    input_data_model['name'].replace(['Maruti', 'Skoda', 'Honda', 'Hyundai', 'Toyota', 'Ford', 'Renault',
+    input_data_model['fuel']=input_data_model['fuel'].replace(['Diesel', 'Petrol', 'LPG', 'CNG'],[1,2,3,4], inplace=True)
+    input_data_model['seller_type']=input_data_model['seller_type'].replace(['Individual', 'Dealer', 'Trustmark Dealer'],[1,2,3], inplace=True)
+    input_data_model['transmission']=input_data_model['transmission'].replace(['Manual', 'Automatic'],[1,2], inplace=True)
+    input_data_model['name']=input_data_model['name'].replace(['Maruti', 'Skoda', 'Honda', 'Hyundai', 'Toyota', 'Ford', 'Renault',
        'Mahindra', 'Tata', 'Chevrolet', 'Datsun', 'Jeep', 'Mercedes-Benz',
        'Mitsubishi', 'Audi', 'Volkswagen', 'BMW', 'Nissan', 'Lexus',
        'Jaguar', 'Land', 'MG', 'Volvo', 'Daewoo', 'Kia', 'Fiat', 'Force',
